@@ -10,13 +10,13 @@ const solution = (req, res) =>  {
         }
         const {operation_type, x, y} = req.body
         let result = 0
-        if(operator === "addition"){
+        if(operation_type === "addition"){
             result = x + y
         }
-        if(operator === "subtraction"){
+        if(operation_type === "subtraction"){
             result = x - y
         }
-        if(operator === "multiplication"){
+        if(operation_type === "multiplication"){
             result = x * y
         }
 

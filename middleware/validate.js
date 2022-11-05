@@ -2,7 +2,7 @@ const Joi = require('joi');
 
 function validateBody(body) {
     let schema = Joi.object({
-        operation_: Joi.string().required(),
+        operation_type: Joi.string().required(),
         x: Joi.number().required(),
         y: Joi.number().required(),
     })
