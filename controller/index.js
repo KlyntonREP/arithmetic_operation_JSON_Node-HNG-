@@ -8,7 +8,7 @@ const solution = (req, res) =>  {
                 msg: "Bad Request"
             })
         }
-        const {operator, x, y} = req.body
+        const {operation_type, x, y} = req.body
         let result = 0
         if(operator === "addition"){
             result = x + y
@@ -20,7 +20,7 @@ const solution = (req, res) =>  {
             result = x * y
         }
 
-        res.status(200).json({slackName: "Klynton", result: result, operator: operator})
+        res.status(200).json({slackUsername: "Klynton", result: result, operation_type: operator})
 }
 
 module.exports = {solution}
