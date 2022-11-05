@@ -8,19 +8,19 @@ const solution = (req, res) =>  {
                 msg: "Bad Request"
             })
         }
-        const {operator, firstNum, secondNum} = req.body
+        const {operator, x, y} = req.body
         let result = 0
         if(operator === "+" || operator === "add"){
-            result = firstNum + secondNum
+            result = x + y
         }
         if(operator === "-" || operator === "subtract"){
-            result = firstNum - secondNum
+            result = x - y
         }
         if(operator === "*" || operator === "multiply"){
-            result = firstNum * secondNum
+            result = x * y
         }
         if(operator === "/" || operator === "divide"){
-            result = firstNum / secondNum
+            result = x / y
         }
 
         res.status(200).json({slackName: "Klynton", result: result, operator: operator})
