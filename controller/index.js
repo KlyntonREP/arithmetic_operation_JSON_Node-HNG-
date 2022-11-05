@@ -20,7 +20,7 @@ const solution = (req, res) =>  {
             result = x * y
         }
 
-        res.status(200).json({slackUsername: "Klynton", result: result, operation_type: operator})
+        res.status(200).json({slackUsername: "Klynton", result: result, operation_type: operation_type})
 }
 
 module.exports = {solution}
