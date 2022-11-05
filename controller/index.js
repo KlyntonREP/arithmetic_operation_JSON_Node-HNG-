@@ -10,17 +10,14 @@ const solution = (req, res) =>  {
         }
         const {operator, x, y} = req.body
         let result = 0
-        if(operator === "+" || operator === "add"){
+        if(operator === "addition"){
             result = x + y
         }
-        if(operator === "-" || operator === "subtract"){
+        if(operator === "subtraction"){
             result = x - y
         }
-        if(operator === "*" || operator === "multiply"){
+        if(operator === "multiplication"){
             result = x * y
-        }
-        if(operator === "/" || operator === "divide"){
-            result = x / y
         }
 
         res.status(200).json({slackName: "Klynton", result: result, operator: operator})
